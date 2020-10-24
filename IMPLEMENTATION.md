@@ -52,7 +52,11 @@ Provide an intercepted voice server update. This causes the server to connect to
     "op": "voiceUpdate",
     "guildId": "...",
     "sessionId": "...",
-    "event": "..."
+    "event": {
+        "token": "...",
+        "guild_id": "...",
+        "endpoint": "..."
+    }
 }
 ```
 
@@ -69,8 +73,8 @@ If `noReplace` is set to true, this operation will be ignored if a track is alre
     "op": "play",
     "guildId": "...",
     "track": "...",
-    "startTime": "60000",
-    "endTime": "120000",
+    "startTime": 60000,
+    "endTime": 120000,
     "noReplace": false
 }
 ```
@@ -154,7 +158,7 @@ Position information about a player. Includes unix timestamp.
 }
 ```
 
-A collection of stats sent every minute. 
+A collection of stats sent every minute.
 
 ```json
 {
